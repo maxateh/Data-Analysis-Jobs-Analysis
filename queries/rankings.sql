@@ -102,5 +102,3 @@ GROUP BY
     skills
 ORDER BY
     avg_salary ASC;
-
-
