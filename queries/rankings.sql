@@ -101,7 +101,6 @@ WHERE
 GROUP BY
     skills
 ORDER BY
-    avg_salary DESC
-LIMIT 30;
+    avg_salary ASC;
 
 
