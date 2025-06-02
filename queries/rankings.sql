@@ -78,8 +78,7 @@ WHERE
 GROUP BY
     SKILLS
 ORDER BY
-    demand_count DESC
-LIMIT 10;
+    demand_count asc;
 
 
 
