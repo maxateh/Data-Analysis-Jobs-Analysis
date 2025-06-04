@@ -60,9 +60,9 @@ CREATE INDEX idx_skill_id ON public.skills_job_dim (skill_id);
 CREATE INDEX idx_job_id ON public.skills_job_dim (job_id);
 
 
-/* I had issues with permissions when loading my table's data. so I did the following:
-
-
+/* I had issues with permissions when loading my table's data.
+After some research, I discovered that postgres servers have limited access to files saved in some locations in Windows environment.
+So I moved the file csv files to a location where postgres will have access. You should find that in the file paths of the docs.
 */
 
 
