@@ -45,7 +45,6 @@ WITH top_paying_jobs AS (
         salary_year_avg DESC
 )
 
-
 SELECT 
     top_paying_jobs.*
     Skills
@@ -60,7 +59,7 @@ ORDER BY
 
 /* 
 Question: What are the most in-demand skills for data analyst?
-- Providing insights to the most valuable skills for job seekers.
+- Providing insights to the most valuable skills for job seekers
 */;
 
 
@@ -81,9 +80,7 @@ ORDER BY
 
 
 /* What are the top skills based on salary?
-
-It reveals how different skills impact salary levels for data analysts and
-helps identify the most financially rewarding skills to acquire and improve.
+It reveals how different skills impact salary levels for data analysts and helps identify the most financially rewarding skills to acquire and improve.
 */
 
 SELECT
