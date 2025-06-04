@@ -1,4 +1,4 @@
--- Create company_dim table with primary key
+-- Creating company_dim table with primary key
 CREATE TABLE public.company_dim
 (
     company_id INT PRIMARY KEY,
@@ -8,7 +8,7 @@ CREATE TABLE public.company_dim
     thumbnail TEXT
 );
 
--- Create skills_dim table with primary key
+-- Creating skills_dim table with primary key
 CREATE TABLE public.skills_dim
 (
     skill_id INT PRIMARY KEY,
@@ -16,7 +16,7 @@ CREATE TABLE public.skills_dim
     type TEXT
 );
 
--- Create job_postings_fact table with primary key
+-- Creating job_postings_fact table with primary key
 CREATE TABLE public.job_postings_fact
 (
     job_id INT PRIMARY KEY,
@@ -38,7 +38,7 @@ CREATE TABLE public.job_postings_fact
     FOREIGN KEY (company_id) REFERENCES public.company_dim (company_id)
 );
 
--- Create skills_job_dim table with a composite primary key and foreign keys
+-- Creating skills_job_dim table with a composite primary key and foreign keys
 CREATE TABLE public.skills_job_dim
 (
     job_id INT,
