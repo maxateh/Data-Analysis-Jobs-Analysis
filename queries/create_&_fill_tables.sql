@@ -48,7 +48,7 @@ CREATE TABLE public.skills_job_dim
     FOREIGN KEY (skill_id) REFERENCES public.skills_dim (skill_id)
 );
 
--- Creating indexes on foreign key columns for better performance
+-- Creating indexes on foreign key columns for better performance and faster running of queries
 CREATE INDEX idx_company_id ON public.job_postings_fact (company_id);
 CREATE INDEX idx_skill_id ON public.skills_job_dim (skill_id);
 CREATE INDEX idx_job_id ON public.skills_job_dim (job_id);
