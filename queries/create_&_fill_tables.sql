@@ -48,12 +48,6 @@ CREATE TABLE public.skills_job_dim
     FOREIGN KEY (skill_id) REFERENCES public.skills_dim (skill_id)
 );
 
--- Set ownership of the tables to the postgres user
-ALTER TABLE public.company_dim OWNER to postgres;
-ALTER TABLE public.skills_dim OWNER to postgres;
-ALTER TABLE public.job_postings_fact OWNER to postgres;
-ALTER TABLE public.skills_job_dim OWNER to postgres;
-
 -- Creating indexes on foreign key columns for better performance
 CREATE INDEX idx_company_id ON public.job_postings_fact (company_id);
 CREATE INDEX idx_skill_id ON public.skills_job_dim (skill_id);
