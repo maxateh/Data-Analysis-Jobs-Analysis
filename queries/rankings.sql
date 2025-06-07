@@ -96,11 +96,10 @@ GROUP BY
 ORDER BY
     avg_salary ASC;
 
-
+-- How accessible are remote jobs without a degree?
 SELECT
     job_title_short,
     name AS company_name,
-    job_work_from_home,
     job_country,
     ROUND(salary_year_avg, 0) AS year_salary
 FROM
@@ -108,6 +107,6 @@ FROM
     LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
 WHERE
     job_no_degree_mention = TRUE AND
-    salary_year_avg IS NOT NULL;
+    salary_year_avg IS NOT NULL
 ORDER BY
     year_salary DESC;
