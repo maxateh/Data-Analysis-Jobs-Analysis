@@ -111,3 +111,5 @@ WHERE
     salary_year_avg IS NOT NULL
 ORDER BY
     year_salary DESC;
+
+
