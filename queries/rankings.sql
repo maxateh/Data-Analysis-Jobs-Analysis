@@ -56,7 +56,6 @@ ORDER BY
     salary_year_avg ASC;
 
 
-
 /* 
 Question: What are the most in-demand skills for data analyst?
 - Providing insights to the most valuable skills for job seekers
@@ -78,7 +77,6 @@ ORDER BY
     demand_count asc;
 
 
-
 /* What are the top skills based on salary?
 It reveals how different skills impact salary levels for data analysts and helps identify the most financially rewarding skills to acquire and improve.
 */
@@ -97,3 +95,19 @@ GROUP BY
     skills
 ORDER BY
     avg_salary ASC;
+
+
+SELECT
+    job_title_short,
+    name AS company_name,
+    job_work_from_home,
+    job_country,
+    ROUND(salary_year_avg, 0) AS year_salary
+FROM
+    public.job_postings_fact
+    LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+WHERE
+    job_no_degree_mention = TRUE AND
+    salary_year_avg IS NOT NULL;
+ORDER BY
+    year_salary DESC;
